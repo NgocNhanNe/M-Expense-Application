@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/blue_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.HomeFragment">
+    <ImageView
+        android:id="@+id/cloverImg"
+        android:layout_width="107dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="4dp"
+        android:elevation="5dp"
+        android:src="@drawable/clvimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/splashText"
+        android:elevation="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="300dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NGOC NHAN"
+            android:textSize="26sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:elevation="6dp"
+        android:paddingLeft="110dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/circles">
+        <LinearLayout
+            android:id="@+id/homeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistic Your Trips"
+                android:textColor="@color/yellow_light_medium"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Total Expense:"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/totalExpense"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="10"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="30sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:elevation="6dp">
+        <RelativeLayout
+            android:id="@+id/menus"
+            android:layout_width="match_parent"
+            android:layout_height="1880dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/relative"
+            android:layout_marginTop="150dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/blue_dark">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVEx"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="210dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginEnd="7dp"
+                    app:cardBackgroundColor="@color/blue_medium">
+                    <TextView
+                        android:id="@+id/numberExpense"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="@color/yellow_light_medium"
+                        android:textSize="30sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="33dp"
+                        android:text="Number of Expense"
+                        android:textColor="@color/yellow_light_medium"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVTrip"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginLeft="15dp"
+                    app:cardBackgroundColor="@color/blue_medium">
+                    <TextView
+                        android:id="@+id/numberTrip"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="@color/yellow_light_medium"
+                        android:textSize="30sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:paddingLeft="34dp"
+                        android:text="Number of Trips"
+                        android:textColor="@color/yellow_light_medium"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/chart"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="395dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/yellow_light_medium"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="15dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/food" />
+                        <TextView
+                            android:id="@+id/foodType_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:paddingTop="15dp"
+                            android:text="EXPENSE OF FOOD"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/amount_food"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="25sp"
+                            android:layout_below="@id/foodType_title"
+                            android:includeFontPadding="false"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/yellow_light_medium"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="15dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/transportation" />
+
+                        <TextView
+                            android:id="@+id/transType_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:paddingTop="15dp"
+                            android:text="EXPENSE OF TRANSPORT"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/amount_trans"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/transType_title"
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:text="0.0"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/yellow_light_medium"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="15dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/doc" />
+
+                        <TextView
+                            android:id="@+id/docsType_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:paddingTop="15dp"
+                            android:text="EXPENSE OF DOCUMENTS"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/amount_documents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="25sp"
+                            android:layout_below="@id/docsType_title"
+                            android:includeFontPadding="false"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/yellow_light_medium"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="15dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/hotel" />
+                        <TextView
+                            android:id="@+id/hotelType_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="15dp"
+                            android:text="EXPENSE OF HOTEL"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/blue_dark"
+                            android:includeFontPadding="false"
+                            android:layout_centerInParent="true"/>
+                        <TextView
+                            android:id="@+id/amount_hotel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="25sp"
+                            android:layout_below="@id/hotelType_title"
+                            android:includeFontPadding="false"
+                            android:layout_centerInParent="true"
+                            />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="270dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/yellow_light_medium"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/other" />
+                    <TextView
+                        android:id="@+id/othersType_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:paddingTop="15dp"
+                        android:text="EXPENSE OF OTHERS"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/amount_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="25sp"
+                        android:layout_below="@id/othersType_title"
+                        android:includeFontPadding="false"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <ImageView
+        android:id="@+id/bgHome"
+        android:layout_width="414dp"
+        android:layout_height="800dp"
+        android:scaleType="fitXY"
+        android:background="@color/blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/cloverImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

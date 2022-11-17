@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Trip.DetailTripFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_tripDtoTripTab"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tripName_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip Name"
+            android:textSize="35sp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/yellow_light_medium"
+            android:layout_gravity="left"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/exportData_btn"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_alignParentStart="true"
+            android:background="@color/yellow_light_medium"
+            android:layout_marginLeft="290dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/export" />
+
+        <ImageView
+            android:id="@+id/editTrip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="330dp"
+            android:background="@color/yellow_light_medium"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/deleteTrip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="370dp"
+            android:layout_marginTop="16dp"
+            android:background="#B33128"
+            android:src="@drawable/ic_baseline_delete_24_white" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/framelayoutDetailTrip"
+        android:layout_width="match_parent"
+        android:layout_height="297dp"
+        android:background="@color/blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardV">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circles" />
+
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/date_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:src="@drawable/ic_baseline_date_range_24" />
+
+                <TextView
+                    android:id="@+id/dateStart_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:text="dateStart"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:text="to"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/dateEnd_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:text="dateEnd"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="18dp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_detail"
+                android:layout_marginTop="20sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:src="@drawable/ic_baseline_location_on_24" />
+
+                <TextView
+                    android:id="@+id/departure_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:text="Departure"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="to"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/destination_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="Destination"
+                    android:textColor="@color/yellow_light_medium"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info"
+            android:layout_marginTop="20dp"
+            android:elevation="6dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/risk_detail_frame"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/yellow_dark"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5sp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_baseline_warning_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/blue_dark"
+                        android:text="Risk Assessment "
+                        android:textSize="15dp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/risk_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="60sp"
+                        android:layout_marginTop="50dp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/trip_types_linear"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="210dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/yellow_dark"
+                app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_compare_arrows_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="25dp"
+                            android:text="Type of Trips"
+                            android:textColor="@color/blue_dark"
+                            android:textSize="15dp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/type_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="60sp"
+                            android:layout_marginTop="50dp"
+                            android:text="International"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/info"
+            android:layout_marginTop="50dp"
+            android:background="@color/yellow_light"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:id="@+id/amount_detail_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="Total Expense:"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/amount_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="140sp"
+                    android:padding="1dp"
+                    android:text="0.00"
+                    android:textColor="@color/black"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/amount_detail_frame"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7sp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_baseline_note_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="5dp"
+                    android:text="Note: "
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/trip_notes"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Description"
+                    android:textSize="15dp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/frameBnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/framelayoutDetailTrip"
+        android:background="@color/blue_dark">
+
+        <Button
+            android:id="@+id/btnAddNewExInTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow_dark"
+            android:text="Add New Expense"
+            android:textColor="@color/blue_dark"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp" />
+    </RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/frameBnt">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1885dp"
+        android:background="@color/blue_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameBnt">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleDetailTrip_Expense"
+            android:layout_width="430dp"
+            android:layout_height="450dp"
+            tools:listitem="@layout/expense_trip_row" />
+
+    </RelativeLayout>
+</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

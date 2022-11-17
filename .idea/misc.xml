@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable-v24/login_bg.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable-v24/rectangle_edittext.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable-v24/round_border_radius.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/drawer_menu.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.132" />
+        <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.1655" />
+        <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.13" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.175" />
+        <entry key="app/src/main/res/layout/activity_index.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3374094202898551" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3374094202898551" />
+        <entry key="app/src/main/res/layout/drawer_menu.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/expense_row.xml" value="0.28854166666666664" />
+        <entry key="app/src/main/res/layout/fragment_add_trip.xml" value="0.27444356282552085" />
+        <entry key="app/src/main/res/layout/fragment_detail_trip.xml" value="0.20602797914468918" />
+        <entry key="app/src/main/res/layout/fragment_expense.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3067484662576687" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/fragment_trip.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/item_option.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/trip_row.xml" value="0.3136184692382812" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.28958333333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.10397796630859374" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

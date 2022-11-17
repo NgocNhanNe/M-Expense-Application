@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ExpenseInTrip.AddExpenseInTripFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+       app:cardBackgroundColor="@color/blue_dark">
+
+        <ImageView
+            android:id="@+id/back_addExpensetoTripTab"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:paddingLeft="10dp"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/addExpense_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD EXPENSE"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_dark"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addExpense_title">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addExpense_title">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/title_typeEx"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Expense Type">
+
+        <AutoCompleteTextView
+            android:id="@+id/act_type"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:inputType="none"
+            tools:ignore="LabelFor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/expenseName_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:maxLines="1"
+        android:hint="Expense Name"
+        android:background="@drawable/edit_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_below="@id/title_typeEx" />
+
+    <!--    location-->
+
+    <EditText
+        android:id="@+id/expenseLocation_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="textMultiLine"
+        android:lines="1"
+        android:maxLines="1"
+        android:layout_below="@id/expenseName_edit"
+        android:background="@drawable/edit_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="Expense Location" />
+
+    <ImageView
+            android:id="@+id/expenseLocationImg"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/expenseLocation_edit"
+            android:layout_alignTop="@+id/expenseLocation_edit"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="348dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_baseline_location_on_24_black" />
+
+    <EditText
+        android:id="@+id/ExpenseDate_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:layout_below="@+id/expenseLocation_edit"
+        android:background="@drawable/edit_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="Expense Date"
+        android:inputType="datetime"/>
+
+
+            <ImageView
+                android:id="@+id/dateExpenseImg"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/expenseLocation_edit"
+                android:layout_alignTop="@+id/expenseLocation_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="347dp"
+                android:layout_marginTop="73dp"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/ic_baseline_date_range_24_black" />
+
+            <EditText
+                android:id="@+id/ExpenseTime_edit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textMultiLine"
+                android:lines="1"
+                android:maxLines="1"
+                android:layout_below="@+id/ExpenseDate_edit"
+                android:background="@drawable/edit_bg"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:hint="Time" />
+            <ImageView
+                android:id="@+id/timeExpenseImg"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ExpenseTime_edit"
+                android:layout_alignTop="@+id/ExpenseTime_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="348dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/ic_baseline_access_time_filled_24" />
+
+
+    <EditText
+        android:id="@+id/ExpenseAmount_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:layout_below="@+id/ExpenseTime_edit"
+        android:background="@drawable/edit_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:hint="Amount"
+        android:inputType="number"/>
+
+            <ImageView
+                android:id="@+id/amountExpenseImg"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ExpenseAmount_edit"
+                android:layout_alignTop="@+id/ExpenseAmount_edit"
+                android:layout_marginStart="348dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/ic_baseline_attach_money_24" />
+
+    <EditText
+        android:id="@+id/ExpenseNotes_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:layout_below="@+id/ExpenseAmount_edit"
+        android:background="@drawable/edit_bg"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:editable="false"
+        android:padding="10dp"
+        android:hint="Pending" />
+
+    <Button
+        android:id="@+id/addExpense_bnt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ExpenseNotes_edit"
+        android:backgroundTint="@color/blue_dark"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="ADD EXPENSE" />
+
+    <Button
+        android:id="@+id/cancleAddExpense_bnt"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/addExpense_bnt"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#919191"
+        android:text="CANCEL" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

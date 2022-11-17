@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ExpenseInTrip.DetailExpenseInTripFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="0dp"
+        app:cardBackgroundColor="@color/blue_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_ExDtoTripDTab"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/exName_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense Name"
+            android:textSize="35sp"
+            android:textColor="@color/yellow_light_medium"
+            android:layout_gravity="left"
+            android:layout_marginLeft="50dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/editEx_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="330dp"
+            android:background="@color/yellow_light_medium"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/deleteEx_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="370dp"
+            android:layout_marginTop="16dp"
+            android:background="#B33128"
+            android:src="@drawable/ic_baseline_delete_24_white" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/framelayoutDetailEx"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/type_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="116dp"
+            android:layout_marginEnd="116dp"
+            android:src="@drawable/food"
+            android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:id="@+id/am_ex_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Amount of Expense"
+                android:layout_below="@id/type_img"
+                android:textColor="@color/blue_dark"
+                android:layout_centerHorizontal="true"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/amount_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:layout_below="@+id/am_ex_title"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/blue_dark"
+                android:textSize="50dp"
+                android:textStyle="bold" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/line1"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/amount_detail"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7sp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_baseline_note_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:layout_marginTop="5dp"
+                        android:text="Status: "
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/ex_notes_detail"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Description"
+                        android:textSize="15dp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/exLocation_detail"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/row_edit"
+                android:backgroundTint="@color/blue_dark"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="Expense location"
+                android:textColor="@color/yellow_light_medium"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignEnd="@+id/exLocation_detail"
+                android:layout_alignBottom="@+id/exLocation_detail"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/blue_dark"
+                android:elevation="1dp"
+                android:src="@drawable/ic_baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/exDate_detail"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/exLocation_detail"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/row_edit"
+            android:backgroundTint="@color/blue_dark"
+            android:text="Expense Date"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/yellow_light_medium"
+            android:textSize="17dp" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/exDate_detail"
+            android:layout_alignBottom="@+id/exDate_detail"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/blue_dark"
+            android:elevation="1dp"
+            android:src="@drawable/ic_baseline_date_range_24" />
+
+        <TextView
+            android:id="@+id/ex_Time_detail"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/exDate_detail"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/row_edit"
+            android:backgroundTint="@color/blue_dark"
+            android:text="Expense Time"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/yellow_light_medium"
+            android:textSize="17dp" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@+id/ex_Time_detail"
+            android:layout_alignBottom="@+id/ex_Time_detail"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/blue_dark"
+            android:elevation="1dp"
+            android:src="@drawable/ic_baseline_access_time" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/exType_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
