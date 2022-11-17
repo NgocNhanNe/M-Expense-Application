@@ -385,7 +385,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     public ArrayList<String> DownloadFile(int id) {
-        final String query = "SELECT  * FROM " + TABLE_EXPENSE_NAME + " WHERE " + TRIP_ID_COLUMN + " = " +id + " order by " + EXPENSE_ID_COLUMN + " desc";
+        final String query = "SELECT  * FROM " + TABLE_EXPENSE_NAME + " a," + TABLE_TRIP_NAME +" b" + " WHERE " + "a."+TRIP_ID_COLUMN + " = " +id + " order by " + EXPENSE_ID_COLUMN + " desc";
         SQLiteDatabase db = this.getReadableDatabase();
         final ArrayList<String> list = new ArrayList<>();
         final Cursor cursor;
@@ -393,7 +393,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query, null);
             StringBuilder JsonFormat = new StringBuilder();
             if (cursor.moveToFirst()) {
-                JsonFormat.append("\n{\n\t\"").append(cursor.getString(0)).append("\":[");
+                JsonFormat.append("\n{\n\t\"").append(cursor.getString(10)).append("\":[");
                 do {
                     String type = cursor.getString(1);
                     String name = cursor.getString(2);
@@ -404,7 +404,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     String notes = cursor.getString(4);
                     if (!cursor.isLast()) {
                         JsonFormat.append("\n\t\t{\n\t\t\t\"expense name\":" + "\"").append(name).append("\",\n");
-                        JsonFormat.append("\n\t\t{\n\t\t\t\"type\":" + "\"").append(type).append("\",\n");
+                        JsonFormat.append("\t\t\t\"type\":" + "\"").append(type).append("\",\n");
                         JsonFormat.append("\t\t\t\"amount\":" + "\"").append(amount).append("\",\n");
                         JsonFormat.append("\t\t\t\"date\":" + "\"").append(date).append("\",\n");
                         JsonFormat.append("\t\t\t\"time\":" + "\"").append(time).append("\",\n");
@@ -413,13 +413,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         JsonFormat.append("\t\t},");
                     } else {
                         JsonFormat.append("\n\t\t{\n\t\t\t\"expense name\":" + "\"").append(name).append("\",\n");
-                        JsonFormat.append("\n\t\t{\n\t\t\t\"type\":" + "\"").append(type).append("\",\n");
+                        JsonFormat.append("\n\t\t\n\t\t\t\"type\":" + "\"").append(type).append("\",\n");
                         JsonFormat.append("\t\t\t\"amount\":" + "\"").append(amount).append("\",\n");
                         JsonFormat.append("\t\t\t\"date\":" + "\"").append(date).append("\",\n");
                         JsonFormat.append("\t\t\t\"time\":" + "\"").append(time).append("\",\n");
                         JsonFormat.append("\t\t\t\"location\":" + "\"").append(location).append("\",\n");
                         JsonFormat.append("\t\t\t\"comments\":" + "\"").append(notes).append("\"\n");
-                        JsonFormat.append("\t\t},");
+                        JsonFormat.append("\t\t}");
                     }
                 } while (cursor.moveToNext());
             }
