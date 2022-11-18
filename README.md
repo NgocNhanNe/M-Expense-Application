@@ -1,5 +1,6 @@
 # M-Expense Application
-The application supports a employee to record and manage expenses in their business trip effiectively and easily. The application is implemented through Android operating system and developed by Java programming language.
+The application supports a employee to record and manage expenses in their business trip effectively and easily. 
+The application is implemented through Android operating system and developed by Java programming language.
 
 The project is constructed by me and my partner. The following is information of my team.
 
@@ -15,7 +16,8 @@ Email: dn2699k@gre.ac.uk
 
 Requirement to run the source code:
 1. You need to download Java SE Development Kit (JDK version 1.0).
-2. An Android device or simulator anroid device with android version 5.0 or API 30 and above. In my project, I run on an android device version 12.0 (API 30)
+2. An Android device or simulator android device with android version 5.0 or API 30 and above. 
+In my project, I run on an android device version 12.0 (API 30)
 3. You need to download the Android Studio lasted version.
 
 Guide for running the application:
