@@ -31,18 +31,15 @@ public class LoginActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(employeeID.getText().toString().equals("EM04032001") && password.getText().toString().equals("21042001")){
-//                    Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_LONG).show();
-//                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
-//                    startActivity(i);
-//                    finish();
-//                }
-//                else {
-//                    Toast.makeText(LoginActivity.this, "Login fail!", Toast.LENGTH_LONG).show();
-//                }
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
-                finish();
+                if(employeeID.getText().toString().equals("EM002") && password.getText().toString().equals("12345")){
+                    Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+                else {
+                    Toast.makeText(LoginActivity.this, "Login fail!", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }

@@ -1,5 +1,6 @@
 package food.app.demo.ExpenseInTrip;
 
+import android.Manifest;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +16,7 @@ import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
+import food.app.demo.MainActivity;
 import food.app.demo.R;
 
 
@@ -22,6 +25,8 @@ public class ExportDataFragment extends Fragment {
     View view;
     String FileName = "DownloadJsonFile.txt";
     ArrayList<String> SaveListDataExport= new ArrayList<>();
+    ImageView back;
+    MainActivity mainActivity;
     TextView showJson;
 
     public ExportDataFragment() {
@@ -41,6 +46,15 @@ public class ExportDataFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_export_data, container, false);
 
         showJson = view.findViewById(R.id.ShowJson);
+
+        back = view.findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainActivity = (MainActivity) getActivity();
+                mainActivity.onBackPressed();
+            }
+        });
 
         SaveListDataExport = readFile(FileName);
 
